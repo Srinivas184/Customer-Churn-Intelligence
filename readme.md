@@ -81,6 +81,25 @@ The risk categories use thresholds defined for this project: high risk at 70% or
 
 The recommendations are rule-based suggestions, not guaranteed ways to prevent churn.
 
+### Preparing the Trained Model
+
+The Streamlit application uses trained model artifacts saved in `models/churn_artifacts.pkl`. This file is excluded from GitHub through `.gitignore`.
+
+To generate it:
+
+1. Download the IBM Telco Customer Churn dataset and place it at `data/Customer_churn.csv`.
+2. Open `notebooks/01_data_understanding.ipynb` in Jupyter or VS Code.
+3. Run the notebook cells in order, including the model training, preprocessing, clustering, and artifact-saving cells.
+4. Confirm that `models/churn_artifacts.pkl` has been created.
+5. Start the application:
+
+```bash
+python -m streamlit run app/app.py
+```
+
+The application can then load the trained components and make churn predictions.
+
+
 ## Project Structure
 
 ```text
