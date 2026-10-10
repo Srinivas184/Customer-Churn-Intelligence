@@ -12,8 +12,7 @@ venv/
 # Data files
 data/*.csv
 
-# Model artifacts
-models/*.pkl
+
 
 # Editor and operating system
 .vscode/
